@@ -1,0 +1,40 @@
+    <div class="middle-box text-center loginscreen  animated fadeInDown">
+        <div>
+            <div>
+
+                <img src="http://cebrac.com.br/wp-content/themes/boldy/images/cebrac/logo_cebrac.png" alt="">
+
+            </div>
+            
+            <br>
+            <h3>Controle de Identidade Estudantil</h3>
+            <p>
+                Sistema proprietário CEBRAC
+            </p>
+            <br>
+            <p>Digite suas credenciais para entrar no sistema.</p>
+
+              <%= form_for(resource, as: resource_name, url: session_path(resource_name), :class => 'm-t') do |f| %>
+                <div class="form-group">
+                  <%= f.email_field :email, :class => 'form-control', autofocus: true, placeholder: 'Email' %>
+                </div>
+
+                <div class="form-group">
+                  <%= f.password_field :password,:class => 'form-control', autocomplete: "off", placeholder: 'Senha' %>
+                </div>
+
+                  <%= f.submit "Entrar", :class => 'btn btn-primary block full-width m-b' %>
+                
+                 <% end %>
+
+              <%= render "devise/shared/links" %>
+                
+                <a href="#"><small>Forgot password?</small></a>
+                
+            </form>
+            <p class="m-t"> <small> Todos Direitos reservados ao CEBRAC &copy; 2015</small> </p>
+        </div>
+    </div>
+
+
+
