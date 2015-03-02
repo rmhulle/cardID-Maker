@@ -1,12 +1,20 @@
 <div class="wrapper wrapper-content animated fadeInRight">
     <div class="row">
         <div class="col-lg-12">
-            <div class="text-center m-t-lg">
-                <h1>
-                    Simple example of second view
-                </h1>
-                <small>Configure in home_controller.rb as minor view.</small>
-            </div>
+        
+        <div class="col-lg-6">
+
+        <h1>Headshot Demo</h1>
+
+        <%= headshot_default_config(Rails.application.config.session_options[:key], headshot_capture_path) %>
+    
+        <%= headshot_camera %>
+
+        <br/>
+
+        <%= headshot_snap_button('Shoot') %></div>
+
+        </div>
         </div>
     </div>
 </div>

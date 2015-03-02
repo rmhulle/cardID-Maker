@@ -1,0 +1,40 @@
+<h1>Listing identities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Enrollment</th>
+      <th>Campus</th>
+      <th>Picture url</th>
+      <th>Pdf url</th>
+      <th>Last print</th>
+      <th>User name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @identities.each do |identity| %>
+      <tr>
+        <td><%= identity.name %></td>
+        <td><%= identity.enrollment %></td>
+        <td><%= identity.campus %></td>
+        <td><%= identity.picture_url %></td>
+        <td><%= identity.pdf_url %></td>
+        <td><%= identity.last_print %></td>
+        <td><%= identity.user_name %></td>
+        <td><%= link_to 'Show', identity %></td>
+        <td><%= link_to 'Edit', edit_identity_path(identity) %></td>
+        <td><%= link_to 'Destroy', identity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Identity', new_identity_path %>

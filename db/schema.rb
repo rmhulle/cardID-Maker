@@ -11,7 +11,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150301215124) do
+ActiveRecord::Schema.define(version: 20150302023752) do
+
+  create_table "Identities", force: true do |t|
+    t.string   "name"
+    t.date     "enrollment",  limit: 255
+    t.string   "campus"
+    t.string   "picture_url"
+    t.string   "pdf_url"
+    t.date     "last_print"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "user_name"
+  end
+
+  add_index "Identities", ["user_id"], name: "index_identities_on_user_id"
+
+  create_table "headshot_photos", force: true do |t|
+    t.string   "description"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.integer  "capturable_id"
+    t.string   "capturable_type"
+    t.datetime "image_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -26,6 +53,7 @@ ActiveRecord::Schema.define(version: 20150301215124) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

@@ -1,4 +1,7 @@
 Myapp::Application.routes.draw do
+  post "headshot/capture" => 'headshot#capture', :as => :headshot_capture
+  resources :identities
+
   devise_for :users
 
   devise_scope :user do

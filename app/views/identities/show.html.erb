@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @identity.name %>
+</p>
+
+<p>
+  <strong>Enrollment:</strong>
+  <%= @identity.enrollment %>
+</p>
+
+<p>
+  <strong>Campus:</strong>
+  <%= @identity.campus %>
+</p>
+
+<p>
+  <strong>Picture url:</strong>
+  <%= @identity.picture_url %>
+</p>
+
+<p>
+  <strong>Pdf url:</strong>
+  <%= @identity.pdf_url %>
+</p>
+
+<p>
+  <strong>Last print:</strong>
+  <%= @identity.last_print %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @identity.user_id %>
+</p>
+<p>
+  <strong>User:</strong>
+  <%= @identity.user_name %>
+</p>
+
+<%= link_to 'Edit', edit_identity_path(@identity) %> |
+<%= link_to 'Back', identities_path %> |
+

@@ -15,6 +15,8 @@
             <p>Digite suas credenciais para entrar no sistema.</p>
 
               <%= form_for(resource, as: resource_name, url: session_path(resource_name), :class => 'm-t') do |f| %>
+
+
                 <div class="form-group">
                   <%= f.email_field :email, :class => 'form-control', autofocus: true, placeholder: 'Email' %>
                 </div>
