@@ -25,6 +25,12 @@
 @import "base/base";
 @import "base/pages";
 
+@import "steps/jquery.steps.css";
+@import "cropper/cropper.min.css";
+@import "datapicker/datepicker3.css";
+@import "switchery/switchery.css";
+@import "chosen/chosen.css";
+
 // RTL Support
 @import "base/rtl";
 
@@ -40,6 +46,7 @@
 // Custom style
 // Your custom style to override base style
 @import "base/custom";
+
 
 
 

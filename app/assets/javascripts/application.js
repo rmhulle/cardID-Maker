@@ -15,4 +15,5 @@
 //= require metisMenu/jquery.metisMenu.js
 //= require pace/pace.min.js
 //= require slimscroll/jquery.slimscroll.min.js
+//= require steps/jquery.steps.min.js
 //= require_tree .

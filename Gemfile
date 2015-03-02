@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 gem 'bootstrap-sass', '3.2.0.0'
 gem "font-awesome-rails"
+gem 'jquery-steps-rails'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
